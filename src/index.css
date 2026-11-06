@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Casko Luxury";
+  src: url("/src/assets/fonts/CaskoLuxury.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Outfit", system-ui, -apple-system, sans-serif;
+    --font-brand: "Pinyon Script", "Casko Luxury", cursive;
+    --color-bg-cool: #FFFFFF;
+    --color-surface-subtle: #F8F9FA;
+    --color-border-subtle: #E5E7EB;
+    --color-text-main: #0A0A0A;
+    --color-text-muted: #6B7280;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-cool);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+    font-size: 15px;
+  }
+
+  h1, h2, h3, h4, .font-serif, .font-editorial, .font-heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .font-brand {
+    font-family: var(--font-brand);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}
